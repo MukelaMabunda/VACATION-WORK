@@ -4,17 +4,20 @@
 #include <string>
 #include <iostream>
 
-#include "Method.h"
-
 using namespace std;
+
+enum class InstallMethod
+{
+    Method_1, Method_2, Method_3, Method_4, Method_5
+};
 
 class Cable
 {
 public:
-    Cable(MethodInstallation method, float cableSize, unsigned int noOfCables, string AC_DC);
+    Cable(InstallMethod method, float cableSize, unsigned int noOfCables, string AC_DC);
 
 private:
-    MethodInstallation method;
+    InstallMethod method;
     float cableSize = 0;
     unsigned int noOfCables = 0;
     string AC_DC = "";

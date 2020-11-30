@@ -1,6 +1,5 @@
 #include <iostream>
 #include "Cable.h"
-#include "Method.h"
 
 using namespace std;
 
@@ -10,7 +9,7 @@ int main()
     unsigned int noOfCables = 2;
     string AC_DC = "AC";
 
-    Cable cableObj( MethodInstallation::Method_1, cableSize, noOfCables, AC_DC);
+    Cable cableObj( InstallMethod::Method_1, cableSize, noOfCables, AC_DC);
 
     return 0;
 }
