@@ -11,11 +11,13 @@ using namespace std;
 class Cable
 {
 public:
-    Cable(unsigned int Size, unsigned int noOfCables, string AC_DC);
-
-protected:
+    Cable(MethodInstallation method, float cableSize, unsigned int noOfCables, string AC_DC);
 
 private:
+    MethodInstallation method;
+    float cableSize = 0;
+    unsigned int noOfCables = 0;
+    string AC_DC = "";
 };
 
 #endif // CABLE_H
