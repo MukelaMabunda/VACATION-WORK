@@ -5,6 +5,8 @@ using namespace std;
 
 int main()
 {
-    cout << "Hello world!" << endl;
+    auto Size = 1u;
+    //Cable cableObj(Size);
+
     return 0;
 }

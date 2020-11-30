@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1606742531 source:c:\users\user\documents\vacation work\vacation-work\cablesizing\cable.cpp
+	"Cable.h"
+
+1606742724 c:\users\user\documents\vacation work\vacation-work\cablesizing\cable.h
+	<string>
+	<iostream>
+	"Method.h"
+
+1606742553 source:c:\users\user\documents\vacation work\vacation-work\cablesizing\main.cpp
+	<iostream>
+	"Cable.h"
+
+1606742724 c:\users\user\documents\vacation work\vacation-work\cablesizing\method.h
+
