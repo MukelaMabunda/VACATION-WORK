@@ -25,6 +25,4 @@ Cable::Cable(InstallMethod method, float cableSize, unsigned int noOfCables, str
     {
         cerr<<"Input Valid no of cables \nChoose from 2 and 3\n";
     }
-
-    cout<<"Cable construct -> "<<(int)method <<", "<<cableSize<<", "<<noOfCables<<", "<<AC_DC;
 }
