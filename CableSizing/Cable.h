@@ -16,13 +16,19 @@ enum class noOfPhase
     singlePhase, threePhase
 };
 
+enum class inFreeAir
+{
+    Horizontal, Vertical, Trefoil
+};
+
 class Cable
 {
 public:
-    Cable(InstallMethod method, float cableSize, unsigned int noOfCables, string AC_DC);
+    Cable(InstallMethod method, float cableSize, unsigned int noOfCables, string AC_DC, noOfPhase phases);
 
 private:
     InstallMethod method;
+    noOfPhase phases;
     float cableSize = 0;
     unsigned int noOfCables = 0;
     string AC_DC = "";
