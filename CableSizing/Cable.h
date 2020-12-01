@@ -24,7 +24,7 @@ enum class inFreeAir
 class Cable
 {
 public:
-    Cable(InstallMethod method, float cableSize, unsigned int noOfCables, string AC_DC, noOfPhase phases);
+    Cable(InstallMethod method, double cableSize, unsigned int noOfCables, string AC_DC, noOfPhase phases);
 
 private:
     InstallMethod method;

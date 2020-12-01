@@ -1,6 +1,6 @@
 #include "Cable.h"
 
-Cable::Cable(InstallMethod method, float cableSize, unsigned int noOfCables, string AC_DC, noOfPhase phases)
+Cable::Cable(InstallMethod method, double cableSize, unsigned int noOfCables, string AC_DC, noOfPhase phases)
 {
     this -> method = method;
     this -> cableSize = cableSize;
