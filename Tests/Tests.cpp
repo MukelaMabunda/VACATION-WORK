@@ -55,3 +55,8 @@ TEST_CASE("Test if cable can be created with no exceptions being thrown")
         CHECK_THROWS(Cable{InstallMethod::Method_5, cableSize, noOfCables, AC_DC, noOfPhase::threePhase});
     }
 }
+
+TEST_CASE("Determine the corresponding current values")
+{
+
+}

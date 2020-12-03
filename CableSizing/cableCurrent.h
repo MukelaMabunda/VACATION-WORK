@@ -6,6 +6,8 @@
 class cableCurrent
 {
 private:
+    double current = 0;
+
     enum hashSizes
     {
         size_1, size_1_5, size_2_5, size_4, size_6, size_10, size_16, size_25, size_35, size_50, size_70,
@@ -802,7 +804,11 @@ public:
         }
         }
     }
-    double current = 0;
+
+    double getCableCurrent ()
+    {
+        return current;
+    }
 };
 
 #endif // CABLECURRENT_H
