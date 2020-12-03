@@ -47,359 +47,71 @@ public:
         string cableSize_ = to_string(cableSize);
         switch (method)
         {
-        case InstallMethod::Method_1:
-        {
-            if (noOfCables == 2)
+            if (freeAir == inFreeAir::None)
             {
-                switch (hashit(cableSize))
-                {
-                case size_1:
-                    current = 11;
-                    break;
-                case size_1_5:
-                    current = 14.5;
-                    break;
-                case size_2_5:
-                    current = 19.5;
-                    break;
-                case size_4:
-                    current = 26;
-                    break;
-                case size_6:
-                    current = 34;
-                    break;
-                case size_10:
-                    current = 46;
-                    break;
-                case size_16:
-                    current = 61;
-                    break;
-                case size_25:
-                    current = 14.5;
-                    break;
-                case size_35:
-                    current = 99;
-                    break;
-                case size_50:
-                    current = 119;
-                    break;
-                case size_70:
-                    current = 151;
-                    break;
-                case size_95:
-                    current = 182;
-                    break;
-                case size_120:
-                    current = 210;
-                    break;
-                case size_150:
-                    current = 240;
-                    break;
-                case size_185:
-                    current = 273;
-                    break;
-                case size_240:
-                    current = 320;
-                    break;
-                case size_300:
-                    current = 367;
-                    break;
-                case size_400:
-                case size_500:
-                case size_630:
-                case size_800:
-                case size_1000:
-                    throw "Invalid size for method 1";
-                    break;
-                }
-            }
-            else if (noOfCables == 3 || noOfCables == 4)
-            {
-                switch (hashit(cableSize))
-                {
-                case size_1:
-                    current = 10.5;
-                    break;
-                case size_1_5:
-                    current = 13.5;
-                    break;
-                case size_2_5:
-                    current = 18;
-                    break;
-                case size_4:
-                    current = 24;
-                    break;
-                case size_6:
-                    current = 31;
-                    break;
-                case size_10:
-                    current = 42;
-                    break;
-                case size_16:
-                    current = 56;
-                    break;
-                case size_25:
-                    current = 73;
-                    break;
-                case size_35:
-                    current = 89;
-                    break;
-                case size_50:
-                    current = 108;
-                    break;
-                case size_70:
-                    current = 136;
-                    break;
-                case size_95:
-                    current = 164;
-                    break;
-                case size_120:
-                    current = 188;
-                    break;
-                case size_150:
-                    current = 216;
-                    break;
-                case size_185:
-                    current = 245;
-                    break;
-                case size_240:
-                    current = 286;
-                    break;
-                case size_300:
-                    current = 328;
-                    break;
-                case size_400:
-                case size_500:
-                case size_630:
-                case size_800:
-                case size_1000:
-                    throw "Invalid size for method 1";
-                    break;
-                }
-            }
-            else
-            {
-                throw "Invalid number of cables for the method 1";
-            }
-            break;
-        }
-        case InstallMethod::Method_2:
-        {
-            if (noOfCables == 2)
-            {
-                switch (hashit(cableSize))
-                {
-                case size_1:
-                    current = 13.5;
-                    break;
-                case size_1_5:
-                    current = 17.5;
-                    break;
-                case size_2_5:
-                    current = 24;
-                    break;
-                case size_4:
-                    current = 32;
-                    break;
-                case size_6:
-                    current = 41;
-                    break;
-                case size_10:
-                    current = 57;
-                    break;
-                case size_16:
-                    current = 76;
-                    break;
-                case size_25:
-                    current = 101;
-                    break;
-                case size_35:
-                    current = 125;
-                    break;
-                case size_50:
-                    current = 151;
-                    break;
-                case size_70:
-                    current = 192;
-                    break;
-                case size_95:
-                    current = 232;
-                    break;
-                case size_120:
-                    current = 269;
-                    break;
-                case size_150:
-                    current = 300;
-                    break;
-                case size_185:
-                    current = 341;
-                    break;
-                case size_240:
-                    current = 400;
-                    break;
-                case size_300:
-                    current = 458;
-                    break;
-                case size_400:
-                    current = 546;
-                    break;
-                case size_500:
-                    current = 626;
-                    break;
-                case size_630:
-                    current = 720;
-                    break;
-                case size_800:
-                case size_1000:
-                    throw "Invalid size for method 2";
-                    break;
-                }
-            }
-            else if (noOfCables == 3 || noOfCables == 4)
-            {
-                switch (hashit(cableSize))
-                {
-                case size_1:
-                    current = 12;
-                    break;
-                case size_1_5:
-                    current = 15.5;
-                    break;
-                case size_2_5:
-                    current = 21;
-                    break;
-                case size_4:
-                    current = 28;
-                    break;
-                case size_6:
-                    current = 36;
-                    break;
-                case size_10:
-                    current = 50;
-                    break;
-                case size_16:
-                    current = 68;
-                    break;
-                case size_25:
-                    current = 89;
-                    break;
-                case size_35:
-                    current = 110;
-                    break;
-                case size_50:
-                    current = 134;
-                    break;
-                case size_70:
-                    current = 171;
-                    break;
-                case size_95:
-                    current = 207;
-                    break;
-                case size_120:
-                    current = 239;
-                    break;
-                case size_150:
-                    current = 262;
-                    break;
-                case size_185:
-                    current = 296;
-                    break;
-                case size_240:
-                    current = 346;
-                    break;
-                case size_300:
-                    current = 394;
-                    break;
-                case size_400:
-                    current = 467;
-                    break;
-                case size_500:
-                    current = 533;
-                    break;
-                case size_630:
-                    current = 611;
-                    break;
-                case size_800:
-                case size_1000:
-                    throw "Invalid size for method 2";
-                    break;
-                }
-            }
-            else
-            {
-                throw "Invalid number of cables for the method 2";
-            }
-            case InstallMethod::Method_3:
+            case InstallMethod::Method_1:
             {
                 if (noOfCables == 2)
                 {
                     switch (hashit(cableSize))
                     {
                     case size_1:
-                        current = 15.5;
+                        current = 11;
                         break;
                     case size_1_5:
-                        current = 20;
+                        current = 14.5;
                         break;
                     case size_2_5:
-                        current = 27;
+                        current = 19.5;
                         break;
                     case size_4:
-                        current = 37;
+                        current = 26;
                         break;
                     case size_6:
-                        current = 47;
+                        current = 34;
                         break;
                     case size_10:
-                        current = 65;
+                        current = 46;
                         break;
                     case size_16:
-                        current = 87;
+                        current = 61;
                         break;
                     case size_25:
-                        current = 114;
+                        current = 14.5;
                         break;
                     case size_35:
-                        current = 141;
+                        current = 99;
                         break;
                     case size_50:
+                        current = 119;
+                        break;
+                    case size_70:
+                        current = 151;
+                        break;
+                    case size_95:
                         current = 182;
                         break;
-                    case size_70:
-                        current = 234;
-                        break;
-                    case size_95:
-                        current = 284;
-                        break;
                     case size_120:
-                        current = 330;
+                        current = 210;
                         break;
                     case size_150:
-                        current = 384;
+                        current = 240;
                         break;
                     case size_185:
-                        current = 436;
+                        current = 273;
                         break;
                     case size_240:
-                        current = 515;
+                        current = 320;
                         break;
                     case size_300:
-                        current = 594;
+                        current = 367;
                         break;
                     case size_400:
-                        current = 694;
-                        break;
                     case size_500:
-                        current = 792;
-                        break;
                     case size_630:
-                        current = 904;
-                        break;
                     case size_800:
-                        current = 1030;
-                        break;
                     case size_1000:
-                        current = 1154;
+                        throw "Invalid size for method 1";
                         break;
                     }
                 }
@@ -408,138 +120,140 @@ public:
                     switch (hashit(cableSize))
                     {
                     case size_1:
-                        current = 14;
+                        current = 10.5;
                         break;
                     case size_1_5:
-                        current = 18;
+                        current = 13.5;
                         break;
                     case size_2_5:
-                        current = 25;
+                        current = 18;
                         break;
                     case size_4:
-                        current = 33;
+                        current = 24;
                         break;
                     case size_6:
-                        current = 43;
+                        current = 31;
                         break;
                     case size_10:
-                        current = 59;
+                        current = 42;
                         break;
                     case size_16:
-                        current = 79;
+                        current = 56;
                         break;
                     case size_25:
-                        current = 104;
+                        current = 73;
                         break;
                     case size_35:
-                        current = 129;
+                        current = 89;
                         break;
                     case size_50:
-                        current = 167;
+                        current = 108;
                         break;
                     case size_70:
-                        current = 214;
+                        current = 136;
                         break;
                     case size_95:
-                        current = 261;
+                        current = 164;
                         break;
                     case size_120:
-                        current = 303;
+                        current = 188;
                         break;
                     case size_150:
-                        current = 349;
+                        current = 216;
                         break;
                     case size_185:
-                        current = 400;
+                        current = 245;
                         break;
                     case size_240:
-                        current = 472;
+                        current = 286;
                         break;
                     case size_300:
-                        current = 545;
+                        current = 328;
                         break;
                     case size_400:
-                        current = 634;
-                        break;
                     case size_500:
-                        current = 723;
-                        break;
                     case size_630:
-                        current = 826;
-                        break;
                     case size_800:
-                        current = 943;
-                        break;
                     case size_1000:
-                        current = 1058;
+                        throw "Invalid size for method 1";
                         break;
                     }
                 }
                 else
                 {
-                    throw "Invalid number of cables for the method 3";
+                    throw "Invalid number of cables for the method 1";
                 }
                 break;
             }
-            case InstallMethod::Method_4:
+            case InstallMethod::Method_2:
             {
                 if (noOfCables == 2)
                 {
                     switch (hashit(cableSize))
                     {
                     case size_1:
+                        current = 13.5;
+                        break;
                     case size_1_5:
+                        current = 17.5;
+                        break;
                     case size_2_5:
+                        current = 24;
+                        break;
                     case size_4:
+                        current = 32;
+                        break;
                     case size_6:
+                        current = 41;
+                        break;
                     case size_10:
+                        current = 57;
+                        break;
                     case size_16:
-                        throw "Invalid size for method 4";
+                        current = 76;
                         break;
                     case size_25:
-                        current = 126;
+                        current = 101;
                         break;
                     case size_35:
-                        current = 156;
+                        current = 125;
                         break;
                     case size_50:
-                        current = 191;
+                        current = 151;
                         break;
                     case size_70:
-                        current = 246;
+                        current = 192;
                         break;
                     case size_95:
-                        current = 300;
+                        current = 232;
                         break;
                     case size_120:
-                        current = 349;
+                        current = 269;
                         break;
                     case size_150:
-                        current = 404;
+                        current = 300;
                         break;
                     case size_185:
-                        current = 463;
+                        current = 341;
                         break;
                     case size_240:
-                        current = 549;
+                        current = 400;
                         break;
                     case size_300:
-                        current = 635;
+                        current = 458;
                         break;
                     case size_400:
-                        current = 732;
+                        current = 546;
                         break;
                     case size_500:
-                        current = 835;
+                        current = 626;
                         break;
                     case size_630:
-                        current = 953;
+                        current = 720;
                         break;
                     case size_800:
-                        current = 1086;
-                        break;
                     case size_1000:
-                        current = 1216;
+                        throw "Invalid size for method 2";
                         break;
                     }
                 }
@@ -548,66 +262,355 @@ public:
                     switch (hashit(cableSize))
                     {
                     case size_1:
+                        current = 12;
+                        break;
                     case size_1_5:
+                        current = 15.5;
+                        break;
                     case size_2_5:
+                        current = 21;
+                        break;
                     case size_4:
+                        current = 28;
+                        break;
                     case size_6:
+                        current = 36;
+                        break;
                     case size_10:
+                        current = 50;
+                        break;
                     case size_16:
-                        throw "Invalid size for method";
+                        current = 68;
                         break;
                     case size_25:
-                        current = 112;
+                        current = 89;
                         break;
                     case size_35:
-                        current = 141;
+                        current = 110;
                         break;
                     case size_50:
-                        current = 172;
+                        current = 134;
                         break;
                     case size_70:
-                        current = 223;
+                        current = 171;
                         break;
                     case size_95:
-                        current = 273;
+                        current = 207;
                         break;
                     case size_120:
-                        current = 318;
+                        current = 239;
                         break;
                     case size_150:
-                        current = 369;
+                        current = 262;
                         break;
                     case size_185:
-                        current = 424;
+                        current = 296;
                         break;
                     case size_240:
-                        current = 504;
+                        current = 346;
                         break;
                     case size_300:
-                        current = 584;
+                        current = 394;
                         break;
                     case size_400:
-                        current = 679;
+                        current = 467;
                         break;
                     case size_500:
-                        current = 778;
+                        current = 533;
                         break;
                     case size_630:
-                        current = 892;
+                        current = 611;
                         break;
                     case size_800:
-                        current = 1020;
-                        break;
                     case size_1000:
-                        current = 1149;
+                        throw "Invalid size for method 2";
                         break;
                     }
                 }
                 else
                 {
-                    throw "Invalid number of cables for the method 4";
+                    throw "Invalid number of cables for the method 2";
                 }
-                break;
+                case InstallMethod::Method_3:
+                {
+                    if (noOfCables == 2)
+                    {
+                        switch (hashit(cableSize))
+                        {
+                        case size_1:
+                            current = 15.5;
+                            break;
+                        case size_1_5:
+                            current = 20;
+                            break;
+                        case size_2_5:
+                            current = 27;
+                            break;
+                        case size_4:
+                            current = 37;
+                            break;
+                        case size_6:
+                            current = 47;
+                            break;
+                        case size_10:
+                            current = 65;
+                            break;
+                        case size_16:
+                            current = 87;
+                            break;
+                        case size_25:
+                            current = 114;
+                            break;
+                        case size_35:
+                            current = 141;
+                            break;
+                        case size_50:
+                            current = 182;
+                            break;
+                        case size_70:
+                            current = 234;
+                            break;
+                        case size_95:
+                            current = 284;
+                            break;
+                        case size_120:
+                            current = 330;
+                            break;
+                        case size_150:
+                            current = 384;
+                            break;
+                        case size_185:
+                            current = 436;
+                            break;
+                        case size_240:
+                            current = 515;
+                            break;
+                        case size_300:
+                            current = 594;
+                            break;
+                        case size_400:
+                            current = 694;
+                            break;
+                        case size_500:
+                            current = 792;
+                            break;
+                        case size_630:
+                            current = 904;
+                            break;
+                        case size_800:
+                            current = 1030;
+                            break;
+                        case size_1000:
+                            current = 1154;
+                            break;
+                        }
+                    }
+                    else if (noOfCables == 3 || noOfCables == 4)
+                    {
+                        switch (hashit(cableSize))
+                        {
+                        case size_1:
+                            current = 14;
+                            break;
+                        case size_1_5:
+                            current = 18;
+                            break;
+                        case size_2_5:
+                            current = 25;
+                            break;
+                        case size_4:
+                            current = 33;
+                            break;
+                        case size_6:
+                            current = 43;
+                            break;
+                        case size_10:
+                            current = 59;
+                            break;
+                        case size_16:
+                            current = 79;
+                            break;
+                        case size_25:
+                            current = 104;
+                            break;
+                        case size_35:
+                            current = 129;
+                            break;
+                        case size_50:
+                            current = 167;
+                            break;
+                        case size_70:
+                            current = 214;
+                            break;
+                        case size_95:
+                            current = 261;
+                            break;
+                        case size_120:
+                            current = 303;
+                            break;
+                        case size_150:
+                            current = 349;
+                            break;
+                        case size_185:
+                            current = 400;
+                            break;
+                        case size_240:
+                            current = 472;
+                            break;
+                        case size_300:
+                            current = 545;
+                            break;
+                        case size_400:
+                            current = 634;
+                            break;
+                        case size_500:
+                            current = 723;
+                            break;
+                        case size_630:
+                            current = 826;
+                            break;
+                        case size_800:
+                            current = 943;
+                            break;
+                        case size_1000:
+                            current = 1058;
+                            break;
+                        }
+                    }
+                    else
+                    {
+                        throw "Invalid number of cables for the method 3";
+                    }
+                    break;
+                }
+                case InstallMethod::Method_4:
+                {
+                    if (noOfCables == 2)
+                    {
+                        switch (hashit(cableSize))
+                        {
+                        case size_1:
+                        case size_1_5:
+                        case size_2_5:
+                        case size_4:
+                        case size_6:
+                        case size_10:
+                        case size_16:
+                            throw "Invalid size for method 4";
+                            break;
+                        case size_25:
+                            current = 126;
+                            break;
+                        case size_35:
+                            current = 156;
+                            break;
+                        case size_50:
+                            current = 191;
+                            break;
+                        case size_70:
+                            current = 246;
+                            break;
+                        case size_95:
+                            current = 300;
+                            break;
+                        case size_120:
+                            current = 349;
+                            break;
+                        case size_150:
+                            current = 404;
+                            break;
+                        case size_185:
+                            current = 463;
+                            break;
+                        case size_240:
+                            current = 549;
+                            break;
+                        case size_300:
+                            current = 635;
+                            break;
+                        case size_400:
+                            current = 732;
+                            break;
+                        case size_500:
+                            current = 835;
+                            break;
+                        case size_630:
+                            current = 953;
+                            break;
+                        case size_800:
+                            current = 1086;
+                            break;
+                        case size_1000:
+                            current = 1216;
+                            break;
+                        }
+                    }
+                    else if (noOfCables == 3 || noOfCables == 4)
+                    {
+                        switch (hashit(cableSize))
+                        {
+                        case size_1:
+                        case size_1_5:
+                        case size_2_5:
+                        case size_4:
+                        case size_6:
+                        case size_10:
+                        case size_16:
+                            throw "Invalid size for method";
+                            break;
+                        case size_25:
+                            current = 112;
+                            break;
+                        case size_35:
+                            current = 141;
+                            break;
+                        case size_50:
+                            current = 172;
+                            break;
+                        case size_70:
+                            current = 223;
+                            break;
+                        case size_95:
+                            current = 273;
+                            break;
+                        case size_120:
+                            current = 318;
+                            break;
+                        case size_150:
+                            current = 369;
+                            break;
+                        case size_185:
+                            current = 424;
+                            break;
+                        case size_240:
+                            current = 504;
+                            break;
+                        case size_300:
+                            current = 584;
+                            break;
+                        case size_400:
+                            current = 679;
+                            break;
+                        case size_500:
+                            current = 778;
+                            break;
+                        case size_630:
+                            current = 892;
+                            break;
+                        case size_800:
+                            current = 1020;
+                            break;
+                        case size_1000:
+                            current = 1149;
+                            break;
+                        }
+                    }
+                    else
+                    {
+                        throw "Invalid number of cables for the method 4";
+                    }
+                    break;
+                }
             }
             case InstallMethod::Method_5:
             {

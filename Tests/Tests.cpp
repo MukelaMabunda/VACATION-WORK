@@ -58,5 +58,5 @@ TEST_CASE("Test if cable can be created with no exceptions being thrown")
 
 TEST_CASE("Determine the corresponding current values")
 {
-
+    cableCurrent(InstallMethod::Method_1, 1.5, 2, freeAir::None)
 }

@@ -18,7 +18,7 @@ enum class noOfPhase
 
 enum class inFreeAir
 {
-    Horizontal, Vertical, Trefoil
+    None,Horizontal, Vertical, Trefoil
 };
 
 class Cable
