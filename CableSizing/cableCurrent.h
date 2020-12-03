@@ -15,30 +15,28 @@ private:
 
     hashSizes hashit (double const& cableSize)
     {
-        if (cableSize == 1) return size_1;
-        if (cableSize == 1) return size_1_5;
-        if (cableSize == 1) return size_2_5;
-        if (cableSize == 1) return size_4;
-        if (cableSize == 1) return size_6;
-        if (cableSize == 1) return size_10;
-        if (cableSize == 1) return size_16;
-        if (cableSize == 1) return size_25;
-        if (cableSize == 1) return size_35;
-        if (cableSize == 1) return size_50;
-        if (cableSize == 1) return size_70;
-        if (cableSize == 1) return size_95;
-        if (cableSize == 1) return size_120;
-        if (cableSize == 1) return size_150;
-        if (cableSize == 1) return size_185;
-        if (cableSize == 1) return size_240;
-        if (cableSize == 1) return size_300;
-        if (cableSize == 1) return size_400;
-        if (cableSize == 1) return size_500;
-        if (cableSize == 1) return size_630;
-        if (cableSize == 1) return size_800;
-        if (cableSize == 1) return size_1000;
-        if (cableSize == 1) return size_630;
-        if (cableSize == 1) return size_630;
+        if (cableSize == 1)   return size_1;
+        if (cableSize == 1.5) return size_1_5;
+        if (cableSize == 2.5) return size_2_5;
+        if (cableSize == 4)   return size_4;
+        if (cableSize == 6)   return size_6;
+        if (cableSize == 10)  return size_10;
+        if (cableSize == 16)  return size_16;
+        if (cableSize == 25)  return size_25;
+        if (cableSize == 35)  return size_35;
+        if (cableSize == 50)  return size_50;
+        if (cableSize == 70)  return size_70;
+        if (cableSize == 95)  return size_95;
+        if (cableSize == 120) return size_120;
+        if (cableSize == 150) return size_150;
+        if (cableSize == 185) return size_185;
+        if (cableSize == 240) return size_240;
+        if (cableSize == 300) return size_300;
+        if (cableSize == 400) return size_400;
+        if (cableSize == 500) return size_500;
+        if (cableSize == 630) return size_630;
+        if (cableSize == 800) return size_800;
+        if (cableSize == 1000)return size_1000;
     }
 
 public:
