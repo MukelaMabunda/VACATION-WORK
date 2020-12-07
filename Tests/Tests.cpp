@@ -30,3 +30,9 @@ TEST_CASE("Test accuracy of voltage drop calculator")
     }
 }
 
+TEST_CASE("Test the voltage percentage drop")
+{
+    voltageDrop dropObj( 10, 30, 0.102, 9.011, 230);
+    CHECK(dropObj.voltageDropNum("1AC")==5.41);
+    CHECK(dropObj.voltPercent()==((5.41/230)*100));
+}
