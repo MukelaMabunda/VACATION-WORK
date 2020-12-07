@@ -26,5 +26,7 @@ double voltageDrop::voltageDropNum(std::string PhaseType)
     {
         throw "WRONG PHASE TYPE USE EITHER: \n1AC - SINGLE PHASE\n3AC - THREE PHASE\nDC - DIRECT CURRENT";
     }
+
+    Vdrop = std::ceil(Vdrop * 100.0) / 100.0;
     return Vdrop;
 }
