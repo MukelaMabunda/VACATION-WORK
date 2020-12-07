@@ -16,14 +16,15 @@ double voltageDrop::voltageDropNum(std::string PhaseType)
 {
     if (PhaseType == "1AC" || PhaseType == "DC")
     {
-
+        Vdrop = (2*I*L*Zc)/(1000);
     }
     else if (PhaseType == "3AC")
     {
-
+        Vdrop = (sqrt(3)*I*L*Zc)/(1000);
     }
     else
     {
         throw "WRONG PHASE TYPE USE EITHER: \n1AC - SINGLE PHASE\n3AC - THREE PHASE\nDC - DIRECT CURRENT";
     }
+    return Vdrop;
 }

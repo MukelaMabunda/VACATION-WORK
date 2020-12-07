@@ -15,6 +15,7 @@ private:
     double Xc= 0;
     double Rc= 0;
     double Zc= 0;
+    double Vdrop = 0;
 };
 
 #endif // VOLTAGEDROP_H
