@@ -22,5 +22,11 @@ TEST_CASE("Test accuracy of voltage drop calculator")
         voltageDrop dropObj( 10, 30, 0.102, 9.011);
         CHECK(dropObj.voltageDropNum("DC")==5.41);
     }
+
+    SUBCASE("Throw exception for wrong phase type")
+    {
+        voltageDrop dropObj( 10, 30, 0.102, 9.011);
+        CHECK_THROWS(dropObj.voltageDropNum("WRONG"));
+    }
 }
 
