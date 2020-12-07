@@ -19,6 +19,11 @@ double voltageDrop::voltageDropNum(std::string PhaseType)
     {
         Vdrop = (2*I*L*Zc)/(1000);
     }
+    else if (PhaseType == "DC")
+    {
+        Zc = Rc;
+        Vdrop = (2*I*L*Zc)/(1000);
+    }
     else if (PhaseType == "3AC")
     {
         Vdrop = (sqrt(3)*I*L*Zc)/(1000);
