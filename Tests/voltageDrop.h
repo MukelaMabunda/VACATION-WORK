@@ -6,10 +6,13 @@
 class voltageDrop
 {
 public:
-    voltageDrop(double I, double L, double Xc, double Rc);
+    voltageDrop(double I, double L, double Xc, double Rc, int Voltage);
     double voltageDropNum(std::string PhaseType);
+    double voltPercent();
 
 private:
+    int Voltage = 0;
+    double voltPer = 0;
     double I = 0;
     double L = 0;
     double Xc= 0;
