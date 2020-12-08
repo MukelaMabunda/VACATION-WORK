@@ -1078,6 +1078,11 @@ public:
     {
         return Xc_Cu, Rc_Cu, Xc_AL, Rc_AL, Rc_Cu_DC, Rc_AL_DC;
     }
+
+    double getCurrent()
+    {
+        return current;
+    }
 };
 
 #endif // CABLECURRENT_H
