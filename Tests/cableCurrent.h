@@ -37,6 +37,7 @@ private:
         size_1000
     };
 
+public:
     hashSizes hashit (double const& cableSize)
     {
         if (cableSize == 1)
@@ -305,7 +306,6 @@ private:
         }
     }
 
-public:
     cableCurrent(InstallMethod method, float cableSize, unsigned int noOfCables, inFreeAir freeAir)
     {
         string cableSize_ = to_string(cableSize);
