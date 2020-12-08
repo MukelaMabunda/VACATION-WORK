@@ -125,62 +125,182 @@ private:
         }
         else if (cableSize == 25)
         {
+            Rc_Cu = 0.88;
+            Rc_AL = 1.44;
+
+            Xc_Cu = 0.079;
+            Xc_AL = 0.079;
+
+            Rc_Cu_DC = 0.87;
+            Rc_AL_DC = 1.44;
             return size_25;
         }
         else if (cableSize == 35)
         {
+            Rc_Cu = 0.63;
+            Rc_AL = 1.03;
+
+            Xc_Cu = 0.076;
+            Xc_AL = 0.076;
+
+            Rc_Cu_DC = 0.62;
+            Rc_AL_DC = 1.03;
             return size_35;
         }
         else if (cableSize == 50)
         {
+            Rc_Cu = 0.44;
+            Rc_AL = 0.72;
+
+            Xc_Cu = 0.076;
+            Xc_AL = 0.076;
+
+            Rc_Cu_DC = 0.44;
+            Rc_AL_DC = 0.72;
             return size_50;
         }
         else if (cableSize == 70)
         {
+            Rc_Cu = 0.31;
+            Rc_AL = 0.52;
+
+            Xc_Cu = 0.074;
+            Xc_AL = 0.074;
+
+            Rc_Cu_DC = 0.31;
+            Rc_AL_DC = 0.15;
             return size_70;
         }
         else if (cableSize == 95)
         {
+            Rc_Cu = 0.23;
+            Rc_AL = 0.38;
+
+            Xc_Cu = 0.073;
+            Xc_AL = 0.073;
+
+            Rc_Cu_DC = 0.23;
+            Rc_AL_DC = 0.38;
             return size_95;
         }
         else if (cableSize == 120)
         {
+            Rc_Cu = 0.18;
+            Rc_AL = 0.30;
+
+            Xc_Cu = 0.072;
+            Xc_AL = 0.072;
+
+            Rc_Cu_DC = 0.18;
+            Rc_AL_DC = 0.30;
             return size_120;
         }
         else if (cableSize == 150)
         {
+            Rc_Cu = 0.15;
+            Rc_AL = 0.24;
+
+            Xc_Cu = 0.072;
+            Xc_AL = 0.072;
+
+            Rc_Cu_DC = 0.15;
+            Rc_AL_DC = 0.24;
             return size_150;
         }
         else if (cableSize == 185)
         {
+            Rc_Cu = 0.12;
+            Rc_AL = 0.20;
+
+            Xc_Cu = 0.072;
+            Xc_AL = 0.072;
+
+            Rc_Cu_DC = 0.12;
+            Rc_AL_DC = 0.19;
             return size_185;
         }
         else if (cableSize == 240)
         {
+            Rc_Cu = 0.095;
+            Rc_AL = 0.156;
+
+            Xc_Cu = 0.072;
+            Xc_AL = 0.072;
+
+            Rc_Cu_DC = 0.091;
+            Rc_AL_DC = 0.150;
             return size_240;
         }
         else if (cableSize == 300)
         {
+            Rc_Cu = 0.077;
+            Rc_AL = 0.127;
+
+            Xc_Cu = 0.071;
+            Xc_AL = 0.071;
+
+            Rc_Cu_DC = 0.073;
+            Rc_AL_DC = 0.120;
             return size_300;
         }
         else if (cableSize == 400)
         {
+            Rc_Cu = 0.060;
+            Rc_AL = 0.099;
+
+            Xc_Cu = 0.071;
+            Xc_AL = 0.071;
+
+            Rc_Cu_DC = 0.055;
+            Rc_AL_DC = 0.090;
             return size_400;
         }
         else if (cableSize == 500)
         {
+            Rc_Cu = 0.050;
+            Rc_AL = 0.083;
+
+            Xc_Cu = 0.070;
+            Xc_AL = 0.070;
+
+            Rc_Cu_DC = 0.044;
+            Rc_AL_DC = 0.072;
             return size_500;
         }
         else if (cableSize == 630)
         {
+            Rc_Cu = 0.043;
+            Rc_AL = 0.071;
+
+            Xc_Cu = 0.069;
+            Xc_AL = 0.069;
+
+            Rc_Cu_DC = 0.035;
+            Rc_AL_DC = 0.057;
             return size_630;
         }
         else if (cableSize == 800)
         {
+            Rc_Cu = 0.037;
+            Rc_AL = 0.061;
+
+            Xc_Cu = 0.058;
+            Xc_AL = 0.058;
+
+            Rc_Cu_DC = 0.027;
+            Rc_AL_DC = 0.045;
             return size_800;
         }
         else if (cableSize == 1000)
         {
+            Rc_Cu = 0.033;
+            Rc_AL = 0.054;
+
+            Xc_Cu = 0.049;
+            Xc_AL = 0.049;
+
+            Rc_Cu_DC = 0.022;
+            Rc_AL_DC = 0.036;
             return size_1000;
         }
     }
