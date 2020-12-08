@@ -52,6 +52,10 @@ private:
         if (cableSize == 1000)return size_1000;
     }
 
+    double current = 0;
+    double Xc = 0;
+    double Rc = 0;
+
 public:
     cableCurrent(InstallMethod method, float cableSize, unsigned int noOfCables, inFreeAir freeAir)
     {
@@ -815,7 +819,6 @@ public:
         }
         }
     }
-    double current = 0;
 };
 
 #endif // CABLECURRENT_H

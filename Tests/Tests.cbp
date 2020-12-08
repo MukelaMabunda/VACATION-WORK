@@ -32,12 +32,11 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="../CableSizing/Cable.cpp" />
-		<Unit filename="../CableSizing/Cable.h" />
-		<Unit filename="../CableSizing/cableCurrent.h" />
-		<Unit filename="../CableSizing/selectCableSize.cpp" />
-		<Unit filename="../CableSizing/selectCableSize.h" />
 		<Unit filename="Tests.cpp" />
+		<Unit filename="cableCurrent.cpp" />
+		<Unit filename="cableCurrent.h" />
+		<Unit filename="voltageDrop.cpp" />
+		<Unit filename="voltageDrop.h" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>
