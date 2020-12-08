@@ -27,7 +27,8 @@ private:
     double Xc_AL = 0;
     double Rc_AL = 0;
 
-    double Rc_DC = 0;
+    double Rc_Cu_DC = 0;
+    double Rc_AL_DC = 0;
 
     enum hashSizes
     {
@@ -40,37 +41,86 @@ private:
     {
         if (cableSize == 1)
         {
-            Xc_Cu = 0;
             Rc_Cu = 21.9;
-
-            Xc_AL = 0;
             Rc_AL = 36.0;
 
-            Rc_DC = 0;
+            Xc_Cu = 0.107;
+            Xc_AL = 0.107;
+
+            Rc_Cu_DC = 21.9;
+            Rc_AL_DC = 36.0;
             return size_1;
         }
         else if (cableSize == 1.5)
         {
+            Rc_Cu = 14.6;
+            Rc_AL = 24.0;
+
+            Xc_Cu = 0.100;
+            Xc_AL = 0.100;
+
+            Rc_Cu_DC = 14.6;
+            Rc_AL_DC = 24.0;
             return size_1_5;
         }
         else if (cableSize == 2.5)
         {
+            Rc_Cu = 8.7;
+            Rc_AL = 14.4;
+
+            Xc_Cu = 0.095;
+            Xc_AL = 0.095;
+
+            Rc_Cu_DC = 8.7;
+            Rc_AL_DC = 14.4;
             return size_2_5;
         }
         else if (cableSize == 4)
         {
+            Rc_Cu = 5.5;
+            Rc_AL = 9.0;
+
+            Xc_Cu = 0.093;
+            Xc_AL = 0.093;
+
+            Rc_Cu_DC = 5.5;
+            Rc_AL_DC = 9.0;
             return size_4;
         }
         else if (cableSize == 6)
         {
+            Rc_Cu = 3.6;
+            Rc_AL = 6.0;
+
+            Xc_Cu = 0.090;
+            Xc_AL = 0.090;
+
+            Rc_Cu_DC = 3.6;
+            Rc_AL_DC = 6.0;
             return size_6;
         }
         else if (cableSize == 10)
         {
+            Rc_Cu = 2.2;
+            Rc_AL = 3.6;
+
+            Xc_Cu = 0.084;
+            Xc_AL = 0.084;
+
+            Rc_Cu_DC = 2.2;
+            Rc_AL_DC = 3.6;
             return size_10;
         }
         else if (cableSize == 16)
         {
+            Rc_Cu = 1.4;
+            Rc_AL = 2.3;
+
+            Xc_Cu = 0.080;
+            Xc_AL = 0.080;
+
+            Rc_Cu_DC = 1.4;
+            Rc_AL_DC = 2.2;
             return size_16;
         }
         else if (cableSize == 25)
