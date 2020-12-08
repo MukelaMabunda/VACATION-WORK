@@ -1,6 +1,12 @@
 #ifndef CABLECURRENT_H
 #define CABLECURRENT_H
 
+#include <string>
+#include <iostream>
+#include <tuple>
+
+using namespace std;
+
 enum class InstallMethod
 {
     Method_1, Method_2, Method_3, Method_4, Method_5
@@ -37,8 +43,7 @@ private:
         size_1000
     };
 
-public:
-    hashSizes hashit (double const& cableSize)
+        hashSizes hashit (double const& cableSize)
     {
         if (cableSize == 1)
         {
@@ -306,9 +311,10 @@ public:
         }
     }
 
+public:
     cableCurrent(InstallMethod method, float cableSize, unsigned int noOfCables, inFreeAir freeAir)
     {
-        string cableSize_ = to_string(cableSize);
+        std::string cableSize_ = to_string(cableSize);
         switch (method)
         {
         case InstallMethod::Method_1:
@@ -1067,6 +1073,10 @@ public:
             }
         }
         }
+    }
+    tuple<double,double,double,double,double,double> getImpedance()
+    {
+        return Xc_Cu, Rc_Cu, Xc_AL, Rc_AL, Rc_Cu_DC, Rc_AL_DC;
     }
 };
 
