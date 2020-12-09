@@ -309,9 +309,15 @@ private:
             Rc_AL_DC = 0.036;
             return size_1000;
         }
+
+        throw "Wrong Method";
     }
 
 public:
+    cableCurrent()
+    {
+
+    }
     cableCurrent(InstallMethod method, float cableSize, unsigned int noOfCables, inFreeAir freeAir)
     {
         std::string cableSize_ = to_string(cableSize);
@@ -1074,9 +1080,11 @@ public:
         }
         }
     }
-    tuple<double,double,double,double,double,double> getImpedance()
+
+    tuple<double,double,double,double,double,double> getImpedance(double const& cableSize)
     {
-        return Xc_Cu, Rc_Cu, Xc_AL, Rc_AL, Rc_Cu_DC, Rc_AL_DC;
+        hashit (cableSize);
+        return {Xc_Cu, Rc_Cu, Xc_AL, Rc_AL, Rc_Cu_DC, Rc_AL_DC};
     }
 
     double getCurrent()

@@ -13,8 +13,43 @@ voltageDrop::voltageDrop(double I, double L, double Xc, double Rc, int Voltage)
     Zc = sqrt (pow(Xc,2) + pow(Rc,2));
 }
 
-double voltageDrop::voltageDropNum(std::string PhaseType)
+voltageDrop::voltageDrop(double I, double L, int Voltage, double cableSize, std::string AL_CU, std::string AC_DC)
 {
+    this -> I = I;
+    this -> L = L;
+    this -> Voltage = Voltage;
+
+    cableCurrent impedance;
+    auto [Xc_Cu, Rc_Cu, Xc_AL, Rc_AL, Rc_Cu_DC, Rc_AL_DC] = impedance.getImpedance(cableSize);
+
+    if (AL_CU == "AL" && AC_DC == "AC")
+    {
+        //Xc_Cu, Rc_Cu, Xc_AL, Rc_AL, Rc_Cu_DC, Rc_AL_DC
+        Xc = Xc_AL;
+        Rc = Rc_AL;
+    }
+    else if (AL_CU == "CU" && AC_DC == "AC")
+    {
+        Xc = Xc_Cu;
+        Rc = Rc_Cu;
+    }
+    else if (AL_CU == "AL" && AC_DC == "DC")
+    {
+        Xc = 0;
+        Rc = Rc_AL_DC;
+    }
+    else if (AL_CU == "CU" && AC_DC == "DC")
+    {
+        Xc = 0;
+        Rc = Rc_Cu_DC;
+    }
+    Zc = sqrt (pow(Xc,2) + pow(Rc,2));
+    cout<<"CABLE DATA:\nSize\t"<<cableSize<<"\nR = \t"<<Rc<<"\nX = \t"<<Xc<<"\nZ = \t"<<Zc;
+}
+
+double voltageDrop::voltageDropNum(const std::string &PhaseType)
+{
+    cout<<Vdrop;
     if (PhaseType == "1AC" || PhaseType == "DC")
     {
         Vdrop = (2*I*L*Zc)/(1000);

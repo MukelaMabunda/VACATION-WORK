@@ -2,12 +2,15 @@
 #define VOLTAGEDROP_H
 
 #include <string>
+#include "cableCurrent.h"
 
 class voltageDrop
 {
 public:
     voltageDrop(double I, double L, double Xc, double Rc, int Voltage);
-    double voltageDropNum(std::string PhaseType);
+    voltageDrop(double I, double L, int Voltage, double cableSize, std::string AL_CU, std::string AC_DC);
+
+    double voltageDropNum(const std::string &PhaseType);
     double voltPercent();
 
 private:
@@ -19,6 +22,7 @@ private:
     double Rc= 0;
     double Zc= 0;
     double Vdrop = 0;
+    double current = 0;
 };
 
 #endif // VOLTAGEDROP_H
