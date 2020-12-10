@@ -44,7 +44,11 @@ voltageDrop::voltageDrop(double I, double L, int Voltage, double cableSize, std:
         Rc = Rc_Cu_DC;
     }
     Zc = sqrt (pow(Xc,2) + pow(Rc,2));
-    cout<<"CABLE DATA:\nSize\t"<<cableSize<<"\nR = \t"<<Rc<<"\nX = \t"<<Xc<<"\nZ = \t"<<Zc;
+}
+
+tuple<double,double,double> voltageDrop::getUsedImpedance()
+{
+    return {Xc,Rc,Zc};
 }
 
 double voltageDrop::voltageDropNum(const std::string &PhaseType)

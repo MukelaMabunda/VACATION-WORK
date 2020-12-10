@@ -2,6 +2,7 @@
 #define VOLTAGEDROP_H
 
 #include <string>
+#include <tuple>
 #include "cableCurrent.h"
 
 class voltageDrop
@@ -12,6 +13,7 @@ public:
 
     double voltageDropNum(const std::string &PhaseType);
     double voltPercent();
+    tuple<double,double,double> getUsedImpedance();
 
 private:
     int Voltage = 0;
