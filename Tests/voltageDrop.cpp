@@ -53,7 +53,6 @@ tuple<double,double,double> voltageDrop::getUsedImpedance()
 
 double voltageDrop::voltageDropNum(const std::string &PhaseType)
 {
-    cout<<Vdrop;
     if (PhaseType == "1AC" || PhaseType == "DC")
     {
         Vdrop = (2*I*L*Zc)/(1000);
